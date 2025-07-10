@@ -1,0 +1,395 @@
+/* Global Styling */
+/* Importing Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    
+    background-color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(#F1F3FF, #CBD4FF);
+    
+}
+
+/* Push content to the right of a fixed sidebar (260px) and below a fixed navbar (80px) */
+.main-content, .main-container, .tabletab-container {
+    margin-left: 80px;  /* width of sidebar */
+    margin-top: 80px;    /* height of navbar */
+    transition: margin 0.3s;
+}
+
+/* Responsive: remove sidebar offset on small screens */
+@media (max-width: 768px) {
+    .main-content, .main-container, .tabletab-container {
+        margin-left: 0;
+        margin-top: 80px;
+    }
+}
+
+/* ////////////////////////////////////////////////MAIN CONTAINER//////////////////////////////////////////////// */
+.main-container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px; 
+    background: #fff;
+    border-radius: 8px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    border-top: 5px solid #125343;
+    border-bottom: 5px solid #125343;
+}
+
+/* Sub-header */
+.sub-header {
+    font-size: 1.75rem; /* Adjust font size for better visibility */
+    font-weight: 600; /* Make the header bold */
+    color: #125343; /* Use a consistent green color */
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+
+/* ////////////////////////////////////////////////TABLETAB CONTAINER//////////////////////////////////////////////// */
+.tabletab-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #125343;
+    border-bottom: 5px solid #125343;
+}
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+/* Modal content box */
+.modal-box {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Form input fields inside modal */
+.modal-form input {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Modal action buttons */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.cancel-button, .submit-button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.cancel-button {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+.cancel-button:hover {
+    background-color: #d1d5db;
+}
+
+.submit-button {
+    background-color: #16a34a;
+    color: #ffffff;
+}
+
+.submit-button:hover {
+    background-color: #15803d;
+}
+
+/* Tab Styles for Employee Management */
+.tabs {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.tab-button {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    padding: 12px 16px;
+    background-color: #f3f4f6; /* Light gray background */
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Initial colors for each tab */
+.tab-button.attendance {
+    background-color: rgb(162, 218, 162); /* Powder blue */
+    color: white; /* Blue text */
+}
+
+.tab-button.salary {
+    background-color: #fef3c7; /* Yellow */
+    color: #d97706; /* Golden yellow text */
+}
+
+.tab-button.info {
+    background-color: #e9d5ff; /* Purple */
+    color: #9333ea; /* Purple text */
+}
+
+/* Hover effect for all tabs */
+.tab-button:hover {
+    background-color: #e5e7eb; /* Slightly darker gray on hover */
+}
+
+/* Active tab button styles */
+.tabs .tab-button.active.attendance {
+    background-color: #c7ddef; /* Darker powder blue */
+    color: #2563eb; /* Darker blue text */
+    font-weight: 600;
+}
+
+.tabs .tab-button.active.salary {
+    background-color: #fde68a; /* Darker yellow */
+    color: #b45309; /* Darker golden yellow text */
+    font-weight: 600;
+}
+
+.tabs .tab-button.active.info {
+    background-color: #d8b4fe; /* Darker purple */
+    color: #7e22ce; /* Darker purple text */
+    font-weight: 600;
+}
+
+
+/* Table styling */
+table {
+width: 100%;
+border-collapse: collapse;
+background-color: #ffffff;
+border-radius: 8px;
+overflow: hidden;
+}
+
+thead tr {
+background-color: #dbeafe;
+color: #374151;
+}
+
+thead th, tbody td {
+padding: 12px 16px;
+border-bottom: 1px solid #e5e7eb;
+text-align: left;
+}
+
+tbody tr {
+color: #374151;
+}
+
+/* General Button Styling */
+.table .btn {
+    font-size: 0.875rem; /* Smaller font size */
+    padding: 5px 10px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+}
+
+/* Edit Button */
+.table .btn-warning {
+    background-color: #ffc107; /* Bootstrap warning color */
+    color: #000; /* Black text */
+    border: none; /* Remove border */
+    transition: background-color 0.3s ease;
+}
+
+.table .btn-warning:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+}
+
+/* Delete Button */
+.table .btn-danger {
+    background-color: #dc3545; /* Bootstrap danger color */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    transition: background-color 0.3s ease;
+}
+
+.table .btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Optional: Add a shadow effect */
+.table .btn {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table .btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Laptops and below */
+@media (max-width: 1200px) {
+    .main-container,
+    .tabletab-container {
+        width: 95%;
+        max-width: 95vw;
+        padding: 15px;
+        margin: 20px auto 0 auto;
+    }
+    .sub-header {
+        font-size: 1.5rem;
+    }
+    #itemCount {
+        font-size: 0.9rem;
+    }
+    .input-group input,
+    .input-group button,
+    button,
+    .table-btn,
+    .modal-footer .btn {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    .tab-button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    table thead th,
+    table tbody td {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+}
+
+/* Tablets and below */
+@media (max-width: 991.98px) {
+    .main-container,
+    .tabletab-container {
+        width: 98%;
+        max-width: 98vw;
+        padding: 10px;
+        margin: 20px auto 0 auto;
+    }
+}
+
+/* 768px and below (large phones/small tablets) */
+@media (max-width: 768px) {
+    .main-container,
+    .tabletab-container {
+        margin: 20px auto 0 auto;
+    }
+    .button-group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .button-group > div {
+        flex: 0 0 auto;
+        width: auto;
+        min-width: 120px;
+        margin-bottom: 0;
+    }
+    .button-group button {
+        width: 100%;
+    }
+    .tabs {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 5px;
+        scrollbar-width: thin;
+    }
+    .tab-button {
+        min-width: 120px;
+        width: auto;
+        margin-bottom: 0;
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+    .table-container {
+        overflow-x: auto;
+    }
+    table thead th,
+    table tbody td {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    #searchBar, #sortSelect {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .sort-container {
+        justify-content: center;
+    }
+    .modal-content {
+        padding: 15px;
+    }
+    .deletemodal-content {
+        width: 80%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .main-container,
+    .tabletab-container {
+        padding: 5px;
+        margin-top: 80px;
+    }
+    table thead th,
+    table tbody td {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+    .tab-button {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .deletemodal-content h3 {
+        font-size: 16px;
+    }
+}

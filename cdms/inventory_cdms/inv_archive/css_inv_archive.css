@@ -1,0 +1,66 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(#F1F3FF, #CBD4FF);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto 20px auto;
+    padding: 20px; 
+    background: #fff;
+    border-radius: 8px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    border-top: 5px solid #125343;
+    border-bottom: 5px solid #125343;
+    overflow: auto;
+}
+
+.tab-container {
+    max-width: 1500px;
+    margin: 20px auto 0 auto;
+    left: 20px;
+    position: relative;
+}
+
+/* Category Tabs */
+#categoryTabs {
+    margin-bottom: 0 !important;
+    background: transparent;
+}
+
+#categoryTabs .nav-link {
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+#categoryTabs .nav-link:hover {
+    background: #fff;
+    color: #333;
+}
+#categoryTabs .nav-link:not(.active) {
+    background-color: #333;
+    color: #fff;
+}
+.nav-tabs .nav-link {
+    border-radius: 0 !important;
+}
+.nav-tabs .nav-item:first-child .nav-link {
+    border-top-left-radius: 0.5rem !important;
+}
+.nav-tabs .nav-item:last-child .nav-link,
+.nav-tabs .nav-item.dropdown:last-child .nav-link {
+    border-top-right-radius: 0.5rem !important;
+}

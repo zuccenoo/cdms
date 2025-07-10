@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation Calendar</title>
+  <link rel="stylesheet" href="calend.css">
+</head>
+<body>
+  <div class="reservation">
+    <h1>Reservation</h1>
+    
+    <div class="reservation-container">
+      <div class="calendar-section">
+        <div class="calendar-header">
+          <div class="legend"> <h3>Reservation Mark</h3>
+            <span class="legend-item"><span class="mark mark1"></span> Villa</span>
+            <span class="legend-item"><span class="mark mark2"></span> Pavilion</span>
+            <span class="legend-item"><span class="mark mark3"></span> Exclusive</span>
+          </div>
+          <div class="month-display">
+            <button id="prevMonth">←</button>
+            <span id="monthName">May</span>
+            <span id="yearNumber">2025</span>
+            <button id="nextMonth">→</button>
+          </div>
+        </div>
+
+        <div class="filter-buttons"><h3>Reservation Category</h3>
+  <button class="filter-btn" data-type="confirmed">Confirmed</button>
+  <button class="filter-btn" data-type="pending">Pending</button>
+  <button class="filter-btn" data-type="pencil">Pencil Booking</button>
+</div>
+
+<!-- Add this: -->
+<hr>
+<h3 id="filter-label" style="padding-left: 2rem; color: #4ba27a;"></h3>
+
+
+        <div id="calendar-days" class="calendar-days"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="calend.js"></script>
+</body>
+</html>
