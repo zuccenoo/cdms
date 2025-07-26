@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-content, .main-container, .tabletab-container {
+  margin-left: 80px;  /* width of sidebar */
+  margin-top: 60px;    /* height of navbar */
+  transition: margin 0.3s;
+}
+
+body {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+h1{
+  color: #00856a;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.bottom-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  flex: 1 1 250px;
+  display: flex;
+  align-items: stretch;
+  min-height: 80px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Left side: label */
+.card-label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Right side: total number */
+.card-number {
+  background-color: rgba(46, 204, 113, 0.15); /* Light green tint */
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  min-width: 45%;
+  text-align: center;
+}
+
+/* Stripe colors for each card */
+.card-green1::before { background-color: #00923d; }
+.card-green2::before { background-color: #00ff4c; }
+.card-green3::before { background-color: #00d3a9; }
+.card-green4::before { background-color: #00856a; }
+.card-green5::before { background-color: #ae2727; }
+.card-green6::before { background-color: #a8ce21; }
+.card-green7::before { background-color: #bc1aa1; }
+.card-green8::before { background-color: #2f16a0; }
+
+/* Matching right section backgrounds */
+.card-green1 .card-number { background-color: rgba(39, 174, 96, 0.15); }
+.card-green2 .card-number { background-color: rgba(46, 204, 113, 0.15); }
+.card-green3 .card-number { background-color: rgba(26, 188, 156, 0.15); }
+.card-green4 .card-number { background-color: rgba(22, 160, 133, 0.15); }
+.card-green5 .card-number { background-color: rgba(39, 174, 96, 0.15); }
+.card-green6 .card-number { background-color: rgba(46, 204, 113, 0.15); }
+.card-green7 .card-number { background-color: rgba(26, 188, 156, 0.15); }
+.card-green8 .card-number { background-color: rgba(22, 160, 133, 0.15); }
+
+.calendar {
+  padding: 20px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calendar-header button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+}
+
+.calendar-grid div {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+}
+
+.calendar-grid .day-name {
+  font-weight: bold;
+  background-color: #dfe6e9;
+}
+
+.calendar-grid .today {
+  background-color: #74b9ff;
+  color: white;
+  font-weight: bold;
+}
+
+.chart-box {
+  padding: 20px;
+  height: 400px;
+  position: relative;
+}
+
+.chart-box canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+  .bottom-boxes {
+    grid-template-columns: 1fr;
+  }
+}
