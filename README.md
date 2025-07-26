@@ -1,2 +1,2 @@
 # cdms
-casa daisy website
+depunggol dito niyo nalang ibahin depuinggol
